@@ -1,0 +1,626 @@
+INFO-FLOW: Workspace C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5 opened at Thu Dec 19 06:41:38 +0700 2024
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg484-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.205 sec.
+Execute   set_part xc7z020clg484-1 
+Execute     add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7z020 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   source ./conv2D.prj/solution5/directives.tcl 
+Execute     set_directive_pipeline initializeBuffer/Initialize_Buffer_Inner_Loop 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute     set_directive_pipeline calculateConvolution/Cal_Inner_Loop 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute     set_directive_pipeline updateBuffer/Update_Buffer_Inner_Loop 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute     set_directive_pipeline conv2D/Output_Col 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute     set_directive_array_partition -type complete -dim 1 conv2D buffer 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredbuffer complete=positionBoolean0type dim=1 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     config_compile -blackbox  
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'conv2D.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling conv2D.c as C
+Execute       get_default_platform 
+Execute       is_encrypted conv2D.c 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "conv2D.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pp.0.c" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E conv2D.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pp.0.c
+Command       clang done; 0.567 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pp.0.c std=gnu89 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pp.0.c  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pp.0.c"  -o "C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pp.0.c -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/useless.bc
+Command       clang done; 0.567 sec.
+INFO-FLOW: Done: GCC PP time: 1.2 seconds per iteration
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredbuffer complete=positionBoolean0type dim=1 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredbuffer complete=positionBoolean0type dim=1 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pp.0.c std=gnu89 -directive=C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pp.0.c std=gnu89 -directive=C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/all.directive.json -quiet -fix-errors C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/xilinx-dataflow-lawyer.conv2D.pp.0.c.diag.yml C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/xilinx-dataflow-lawyer.conv2D.pp.0.c.out.log 2> C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/xilinx-dataflow-lawyer.conv2D.pp.0.c.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pp.0.c std=gnu89 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/tidy-3.1.conv2D.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/tidy-3.1.conv2D.pp.0.c.out.log 2> C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/tidy-3.1.conv2D.pp.0.c.err.log 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/xilinx-legacy-rewriter.conv2D.pp.0.c.out.log 2> C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/xilinx-legacy-rewriter.conv2D.pp.0.c.err.log 
+Command       tidy_31 done; 0.145 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.2 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pragma.1.c std=gnu89 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pragma.2.c  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.bc
+Command       clang done; 0.574 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.g.bc -hls-opt -except-internalize conv2D -LC:/Xilinx/Vivado/2018.3/win64/lib -lhlsm -lhlsmc++ -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.g 
+Command       llvm-ld done; 0.686 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 103.109 ; gain = 18.426
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 103.109 ; gain = 18.426
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.pp.bc -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2018.3/win64/lib -lfloatconversion -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.29 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -lower-blackbox -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top conv2D -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.g.0.bc -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 104.629 ; gain = 19.945
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.g.1.bc -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'initializeBuffer' into 'conv2D' (conv2D.c:94) automatically.
+INFO: [XFORM 203-602] Inlining function 'calculateConvolution' into 'conv2D' (conv2D.c:101) automatically.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.g.2.prechk.bc -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 104.883 ; gain = 20.199
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.g.1.bc to C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.o.1.bc -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'updateBuffer' (conv2D.c:49).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'calculateConvolution' (conv2D.c:27).
+WARNING: [XFORM 203-503] Cannot unroll loop 'Update_Buffer_Outer_Loop' (conv2D.c:59) in function 'updateBuffer': cannot completely unroll a loop with a variable trip count.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Update_Buffer_Inner_Loop' (conv2D.c:62) in function 'updateBuffer': cannot completely unroll a loop with a variable trip count.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Cal_Outer_Loop' (conv2D.c:36) in function 'calculateConvolution': cannot completely unroll a loop with a variable trip count.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Cal_Inner_Loop' (conv2D.c:39) in function 'calculateConvolution': cannot completely unroll a loop with a variable trip count.
+INFO: [XFORM 203-101] Partitioning array 'buffer' (conv2D.c:87) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'calculateConvolution' into 'conv2D' (conv2D.c:101) automatically.
+Command         transform done; 0.262 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.o.1.tmp.bc -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform done; 0.163 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 127.711 ; gain = 43.027
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -cdfg-build C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.o.2.bc -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Update_Buffer_Outer_Loop' (conv2D.c:59:62) in function 'updateBuffer' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Initialize_Buffer_Outer_Loop' (conv2D.c:15:62) in function 'initializeBuffer'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Cal_Outer_Loop' (conv2D.c:36:62) in function 'conv2D'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Output_Col' (conv2D.c:97:100) in function 'conv2D' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Output_Row' (conv2D.c:90:96) in function 'conv2D' : 
+
+the outer loop is not a perfect loop.
+Command         transform done; 0.634 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 146.000 ; gain = 61.316
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 1.472 sec.
+Command     elaborate done; 4.316 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'conv2D' ...
+Execute       ap_set_top_model conv2D 
+Execute       get_model_list conv2D -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model conv2D 
+Execute       preproc_iomode -model updateBuffer 
+Execute       preproc_iomode -model initializeBuffer 
+Execute       get_model_list conv2D -filter all-wo-channel 
+INFO-FLOW: Model list for configure: initializeBuffer updateBuffer conv2D
+INFO-FLOW: Configuring Module : initializeBuffer ...
+Execute       set_default_model initializeBuffer 
+Execute       apply_spec_resource_limit initializeBuffer 
+INFO-FLOW: Configuring Module : updateBuffer ...
+Execute       set_default_model updateBuffer 
+Execute       apply_spec_resource_limit updateBuffer 
+INFO-FLOW: Configuring Module : conv2D ...
+Execute       set_default_model conv2D 
+Execute       apply_spec_resource_limit conv2D 
+INFO-FLOW: Model list for preprocess: initializeBuffer updateBuffer conv2D
+INFO-FLOW: Preprocessing Module: initializeBuffer ...
+Execute       set_default_model initializeBuffer 
+Execute       cdfg_preprocess -model initializeBuffer 
+Execute       rtl_gen_preprocess initializeBuffer 
+INFO-FLOW: Preprocessing Module: updateBuffer ...
+Execute       set_default_model updateBuffer 
+Execute       cdfg_preprocess -model updateBuffer 
+Execute       rtl_gen_preprocess updateBuffer 
+INFO-FLOW: Preprocessing Module: conv2D ...
+Execute       set_default_model conv2D 
+Execute       cdfg_preprocess -model conv2D 
+Execute       rtl_gen_preprocess conv2D 
+INFO-FLOW: Model list for synthesis: initializeBuffer updateBuffer conv2D
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'initializeBuffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model initializeBuffer 
+Execute       schedule -model initializeBuffer 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Initialize_Buffer_Outer_Loop_Initialize_Buffer_Inner_Loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'initializeBuffer' consists of the following:
+	'mul' operation of DSP[168] ('tmp_16', conv2D.c:20) [162]  (3.36 ns)
+	'add' operation of DSP[168] ('tmp_17', conv2D.c:20) [168]  (3.02 ns)
+	'getelementptr' operation ('in_data_addr', conv2D.c:20) [170]  (0 ns)
+	'load' operation ('in_data_load', conv2D.c:20) on array 'in_data' [171]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.128 sec.
+INFO: [HLS 200-111]  Elapsed time: 5.244 seconds; current allocated memory: 104.657 MB.
+Execute       report -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/initializeBuffer.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/initializeBuffer.sched.adb -f 
+INFO-FLOW: Finish scheduling initializeBuffer.
+Execute       set_default_model initializeBuffer 
+Execute       bind -model initializeBuffer 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=initializeBuffer
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.126 seconds; current allocated memory: 105.710 MB.
+Execute       report -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/initializeBuffer.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/initializeBuffer.bind.adb -f 
+INFO-FLOW: Finish binding initializeBuffer.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'updateBuffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model updateBuffer 
+Execute       schedule -model updateBuffer 
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Function contains subloop(s) not being unrolled.
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'updateBuffer' consists of the following:
+	'add' operation of DSP[182] ('tmp_12', conv2D.c:69) [180]  (0 ns)
+	'mul' operation of DSP[182] ('tmp_14', conv2D.c:69) [181]  (3.36 ns)
+	'add' operation of DSP[182] ('tmp_15', conv2D.c:69) [182]  (3.02 ns)
+	'getelementptr' operation ('in_data_addr', conv2D.c:69) [184]  (0 ns)
+	'load' operation ('in_data_load', conv2D.c:69) on array 'in_data' [185]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.133 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.254 seconds; current allocated memory: 106.310 MB.
+Execute       report -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/updateBuffer.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+Execute       db_write -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/updateBuffer.sched.adb -f 
+INFO-FLOW: Finish scheduling updateBuffer.
+Execute       set_default_model updateBuffer 
+Execute       bind -model updateBuffer 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=updateBuffer
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.162 seconds; current allocated memory: 108.517 MB.
+Execute       report -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/updateBuffer.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/updateBuffer.bind.adb -f 
+INFO-FLOW: Finish binding updateBuffer.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model conv2D 
+Execute       schedule -model conv2D 
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+INFO: [SCHED 204-61] Pipelining loop 'Cal_Outer_Loop_Cal_Inner_Loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'conv2D' consists of the following:
+	'mul' operation of DSP[208] ('tmp_29', conv2D.c:41->conv2D.c:101) [198]  (3.36 ns)
+	'add' operation of DSP[208] ('tmp_30', conv2D.c:41->conv2D.c:101) [208]  (3.02 ns)
+	'getelementptr' operation ('kernel_addr', conv2D.c:41->conv2D.c:101) [210]  (0 ns)
+	'load' operation ('kernel_load', conv2D.c:41->conv2D.c:101) on array 'kernel' [211]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.135 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.318 seconds; current allocated memory: 109.125 MB.
+Execute       report -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.sched.adb -f 
+INFO-FLOW: Finish scheduling conv2D.
+Execute       set_default_model conv2D 
+Execute       bind -model conv2D 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=conv2D
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.177 seconds; current allocated memory: 109.954 MB.
+Execute       report -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.verbose.bind.rpt -verbose -f 
+Command       report done; 0.114 sec.
+Execute       db_write -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.bind.adb -f 
+INFO-FLOW: Finish binding conv2D.
+Execute       get_model_list conv2D -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess initializeBuffer 
+Execute       rtl_gen_preprocess updateBuffer 
+Execute       rtl_gen_preprocess conv2D 
+INFO-FLOW: Model list for RTL generation: initializeBuffer updateBuffer conv2D
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'initializeBuffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model initializeBuffer -vendor xilinx -mg_file C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/initializeBuffer.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'conv2D_mac_muladd_8ns_15s_15ns_15_1_1' to 'conv2D_mac_muladdbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'conv2D_mac_muladdbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'initializeBuffer'.
+INFO: [HLS 200-111]  Elapsed time: 0.265 seconds; current allocated memory: 112.586 MB.
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.rtl_wrap.cfg.tcl 
+Execute       gen_rtl initializeBuffer -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/syn/systemc/initializeBuffer -synmodules initializeBuffer updateBuffer conv2D 
+Execute       gen_rtl initializeBuffer -style xilinx -f -lang vhdl -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/syn/vhdl/initializeBuffer 
+Execute       gen_rtl initializeBuffer -style xilinx -f -lang vlog -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/syn/verilog/initializeBuffer 
+Execute       gen_tb_info initializeBuffer -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/initializeBuffer -p C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db 
+Execute       report -model initializeBuffer -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/syn/report/initializeBuffer_csynth.rpt -f 
+Execute       report -model initializeBuffer -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/syn/report/initializeBuffer_csynth.xml -f -x 
+Execute       report -model initializeBuffer -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/initializeBuffer.verbose.rpt -verbose -f 
+Execute       db_write -model initializeBuffer -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/initializeBuffer.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'updateBuffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model updateBuffer -vendor xilinx -mg_file C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/updateBuffer.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'conv2D_mux_255_32_1_1' to 'conv2D_mux_255_32cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2D_mux_325_32_1_1' to 'conv2D_mux_325_32dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2D_ama_addmuladd_15ns_15ns_8ns_15ns_15_1_1' to 'conv2D_ama_addmuleOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'conv2D_ama_addmuleOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'conv2D_mux_255_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'conv2D_mux_325_32dEe': 50 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'updateBuffer'.
+Command       create_rtl_model done; 0.223 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.615 seconds; current allocated memory: 120.926 MB.
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.rtl_wrap.cfg.tcl 
+Execute       gen_rtl updateBuffer -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/syn/systemc/updateBuffer -synmodules initializeBuffer updateBuffer conv2D 
+Execute       gen_rtl updateBuffer -style xilinx -f -lang vhdl -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/syn/vhdl/updateBuffer 
+Execute       gen_rtl updateBuffer -style xilinx -f -lang vlog -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/syn/verilog/updateBuffer 
+Execute       gen_tb_info updateBuffer -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/updateBuffer -p C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db 
+Execute       report -model updateBuffer -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/syn/report/updateBuffer_csynth.rpt -f 
+Execute       report -model updateBuffer -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/syn/report/updateBuffer_csynth.xml -f -x 
+Execute       report -model updateBuffer -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/updateBuffer.verbose.rpt -verbose -f 
+Execute       db_write -model updateBuffer -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/updateBuffer.adb -f 
+Command       db_write done; 0.102 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model conv2D -vendor xilinx -mg_file C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/in_data' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/out_data' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/row_in' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/col_in' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/kernel' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/kernel_size_row' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/kernel_size_col' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'conv2D' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] RTL name 'conv2D_mux_255_32cud' is changed to 'conv2D_mux_255_32cud_x' due to conflict.
+INFO: [SYN 201-210] Renamed object name 'conv2D_mac_muladd_8ns_11s_11ns_11_1_1' to 'conv2D_mac_muladdfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2D_mac_muladd_5s_5s_5ns_5_1_1' to 'conv2D_mac_muladdg8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'conv2D_mac_muladdfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'conv2D_mac_muladdg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'conv2D_mux_255_32cud_x': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D'.
+Command       create_rtl_model done; 0.239 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.748 seconds; current allocated memory: 124.232 MB.
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.rtl_wrap.cfg.tcl 
+Execute       gen_rtl conv2D -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/syn/systemc/conv2D -synmodules initializeBuffer updateBuffer conv2D 
+Execute       gen_rtl conv2D -istop -style xilinx -f -lang vhdl -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/syn/vhdl/conv2D 
+Execute       gen_rtl conv2D -istop -style xilinx -f -lang vlog -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/syn/verilog/conv2D 
+Execute       export_constraint_db -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.constraint.tcl -f -tool general 
+Execute       report -model conv2D -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.design.xml -verbose -f -dv 
+Execute       report -model conv2D -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info conv2D -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D -p C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db 
+Execute       report -model conv2D -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/syn/report/conv2D_csynth.rpt -f 
+Execute       report -model conv2D -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/syn/report/conv2D_csynth.xml -f -x 
+Execute       report -model conv2D -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.verbose.rpt -verbose -f 
+Command       report done; 0.125 sec.
+Execute       db_write -model conv2D -o C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.adb -f 
+Execute       sc_get_clocks conv2D 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain conv2D 
+INFO-FLOW: Model list for RTL component generation: initializeBuffer updateBuffer conv2D
+INFO-FLOW: Handling components in module [initializeBuffer] ... 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/initializeBuffer.compgen.tcl 
+INFO-FLOW: Found component conv2D_mac_muladdbkb.
+INFO-FLOW: Append model conv2D_mac_muladdbkb
+INFO-FLOW: Handling components in module [updateBuffer] ... 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/updateBuffer.compgen.tcl 
+INFO-FLOW: Found component conv2D_mux_255_32cud.
+INFO-FLOW: Append model conv2D_mux_255_32cud
+INFO-FLOW: Found component conv2D_mux_325_32dEe.
+INFO-FLOW: Append model conv2D_mux_325_32dEe
+INFO-FLOW: Found component conv2D_ama_addmuleOg.
+INFO-FLOW: Append model conv2D_ama_addmuleOg
+INFO-FLOW: Handling components in module [conv2D] ... 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.compgen.tcl 
+INFO-FLOW: Found component conv2D_mux_255_32cud_x.
+INFO-FLOW: Append model conv2D_mux_255_32cud_x
+INFO-FLOW: Found component conv2D_mac_muladdfYi.
+INFO-FLOW: Append model conv2D_mac_muladdfYi
+INFO-FLOW: Found component conv2D_mac_muladdg8j.
+INFO-FLOW: Append model conv2D_mac_muladdg8j
+INFO-FLOW: Append model initializeBuffer
+INFO-FLOW: Append model updateBuffer
+INFO-FLOW: Append model conv2D
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: conv2D_mac_muladdbkb conv2D_mux_255_32cud conv2D_mux_325_32dEe conv2D_ama_addmuleOg conv2D_mux_255_32cud_x conv2D_mac_muladdfYi conv2D_mac_muladdg8j initializeBuffer updateBuffer conv2D
+INFO-FLOW: To file: write model conv2D_mac_muladdbkb
+INFO-FLOW: To file: write model conv2D_mux_255_32cud
+INFO-FLOW: To file: write model conv2D_mux_325_32dEe
+INFO-FLOW: To file: write model conv2D_ama_addmuleOg
+INFO-FLOW: To file: write model conv2D_mux_255_32cud_x
+INFO-FLOW: To file: write model conv2D_mac_muladdfYi
+INFO-FLOW: To file: write model conv2D_mac_muladdg8j
+INFO-FLOW: To file: write model initializeBuffer
+INFO-FLOW: To file: write model updateBuffer
+INFO-FLOW: To file: write model conv2D
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/initializeBuffer.compgen.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/updateBuffer.compgen.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.compgen.tcl 
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=conv2D xml_exists=0
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.tbgen.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/initializeBuffer.compgen.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/updateBuffer.compgen.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/initializeBuffer.compgen.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/updateBuffer.compgen.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.compgen.tcl 
+Execute         source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.tbgen.tcl 
+Execute         source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.tbgen.tcl 
+Execute         source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/initializeBuffer.compgen.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/updateBuffer.compgen.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.compgen.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.constraint.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=16
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=7
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=10 #gSsdmPorts=16
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.tbgen.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.tbgen.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_export -xo 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/conv2D.constraint.tcl 
+Execute       sc_get_clocks conv2D 
+Execute       source C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution5/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 191.273 ; gain = 106.590
+INFO: [SYSC 207-301] Generating SystemC RTL for conv2D.
+INFO: [VHDL 208-304] Generating VHDL RTL for conv2D.
+INFO: [VLOG 209-307] Generating Verilog RTL for conv2D.
+Command     autosyn done; 4.657 sec.
+Execute     get_part 
+Execute     get_config_export -sdx_tcl 
+Command   csynth_design done; 8.986 sec.
+Command ap_source done; 9.303 sec.
+Execute cleanup_all 

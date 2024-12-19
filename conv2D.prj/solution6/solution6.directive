@@ -1,0 +1,33 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="conv2D" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="buffer" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="conv2D" label="Output_Col" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="updateBuffer" label="Update_Buffer_Inner_Loop" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="calculateConvolution" label="Cal_Inner_Loop" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="initializeBuffer" label="Initialize_Buffer_Inner_Loop" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="updateBuffer" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="calculateConvolution" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="initializeBuffer" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

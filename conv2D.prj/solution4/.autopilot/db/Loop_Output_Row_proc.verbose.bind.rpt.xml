@@ -1,0 +1,52 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'Loop_Output_Row_proc'" level="0">
+<item name = "Date">Thu Dec 19 06:39:25 2024
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">conv2D.prj</item>
+<item name = "Solution">solution4</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 9.634, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">23, 67631, 23, 67631, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_updateBuffer_fu_303">updateBuffer, 6, 231, 6, 231, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Output_Row">22, 67630, 22 ~ 6763, -, -, 1 ~ 10, no</column>
+<column name=" + Initialize_Buffer_Outer_Loop">4, 220, 4 ~ 22, -, -, 1 ~ 10, no</column>
+<column name="  ++ Initialize_Buffer_Inner_Loop">2, 20, 2, -, -, 1 ~ 10, no</column>
+<column name=" + Output_Col">15, 6540, 15 ~ 654, -, -, 1 ~ 10, no</column>
+<column name="  ++ Cal_Outer_Loop">6, 420, 6 ~ 42, -, -, 1 ~ 10, no</column>
+<column name="   +++ Cal_Inner_Loop">4, 40, 4, -, -, 1 ~ 10, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

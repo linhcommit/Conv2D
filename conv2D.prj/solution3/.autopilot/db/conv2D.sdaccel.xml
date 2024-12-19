@@ -1,0 +1,173 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'conv2D'" level="0">
+<item name = "Date">Thu Dec 19 06:35:47 2024
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">conv2D.prj</item>
+<item name = "Solution">solution3</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">10.00</item>
+<item name = "Clock uncertainty (ns)">1.25</item>
+<item name = "Estimated clock period (ns)">9.634</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">26, 67841, 26, 67841, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_updateBuffer_fu_142">updateBuffer, 6, 231, 6, 231, none</column>
+<column name="grp_calculateConvolution_fu_156">calculateConvolution, 7, 421, 7, 421, none</column>
+<column name="grp_initializeBuffer_fu_166">initializeBuffer, 5, 221, 5, 221, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Output_Row">25, 67840, 25 ~ 6784, -, -, 1 ~ 10, no</column>
+<column name=" + Output_Col">17, 6560, 17 ~ 656, -, -, 1 ~ 10, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 306</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, 5, 984, 1194</column>
+<column name="Memory">0, -, 64, 13</column>
+<column name="Multiplexer">-, -, -, 170</column>
+<column name="Register">-, -, 289, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">0, 2, 1, 3</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_calculateConvolution_fu_156">calculateConvolution, 0, 3, 409, 390</column>
+<column name="grp_initializeBuffer_fu_166">initializeBuffer, 0, 1, 270, 344</column>
+<column name="grp_updateBuffer_fu_142">updateBuffer, 0, 1, 305, 460</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="buffer_U">conv2D_buffer, 0, 64, 13, 25, 32, 1, 800</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="index_col_out_1_fu_235_p2">+, 0, 0, 38, 31, 1</column>
+<column name="index_row_out_1_fu_220_p2">+, 0, 0, 38, 1, 31</column>
+<column name="next_mul_fu_205_p2">+, 0, 0, 45, 7, 38</column>
+<column name="tmp_21_fu_189_p2">+, 0, 0, 32, 32, 1</column>
+<column name="tmp_28_fu_245_p2">+, 0, 0, 21, 15, 15</column>
+<column name="tmp_fu_177_p2">+, 0, 0, 32, 32, 1</column>
+<column name="tmp_22_fu_195_p2">-, 0, 0, 32, 32, 32</column>
+<column name="tmp_s_fu_183_p2">-, 0, 0, 32, 32, 32</column>
+<column name="tmp_23_fu_215_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="tmp_25_fu_230_p2">icmp, 0, 0, 18, 32, 32</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">41, 8, 1, 8</column>
+<column name="buffer_address0">21, 4, 5, 20</column>
+<column name="buffer_ce0">21, 4, 1, 4</column>
+<column name="buffer_d0">15, 3, 32, 96</column>
+<column name="buffer_we0">15, 3, 1, 3</column>
+<column name="in_data_address0">15, 3, 14, 42</column>
+<column name="in_data_ce0">15, 3, 1, 3</column>
+<column name="index_col_out_reg_130">9, 2, 31, 62</column>
+<column name="index_row_out_reg_107">9, 2, 31, 62</column>
+<column name="phi_mul_reg_119">9, 2, 38, 76</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">7, 0, 7, 0</column>
+<column name="grp_calculateConvolution_fu_156_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_initializeBuffer_fu_166_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_updateBuffer_fu_142_ap_start_reg">1, 0, 1, 0</column>
+<column name="index_col_out_1_reg_305">31, 0, 31, 0</column>
+<column name="index_col_out_reg_130">31, 0, 31, 0</column>
+<column name="index_row_out_1_reg_297">31, 0, 31, 0</column>
+<column name="index_row_out_reg_107">31, 0, 31, 0</column>
+<column name="next_mul_reg_289">38, 0, 38, 0</column>
+<column name="phi_mul_reg_119">38, 0, 38, 0</column>
+<column name="tmp_22_reg_279">32, 0, 32, 0</column>
+<column name="tmp_29_reg_284">15, 0, 15, 0</column>
+<column name="tmp_s_reg_274">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, conv2D, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, conv2D, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, conv2D, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, conv2D, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, conv2D, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, conv2D, return value</column>
+<column name="in_data_address0">out, 14, ap_memory, in_data, array</column>
+<column name="in_data_ce0">out, 1, ap_memory, in_data, array</column>
+<column name="in_data_q0">in, 32, ap_memory, in_data, array</column>
+<column name="out_data_address0">out, 14, ap_memory, out_data, array</column>
+<column name="out_data_ce0">out, 1, ap_memory, out_data, array</column>
+<column name="out_data_we0">out, 1, ap_memory, out_data, array</column>
+<column name="out_data_d0">out, 32, ap_memory, out_data, array</column>
+<column name="row_in">in, 32, ap_none, row_in, scalar</column>
+<column name="col_in">in, 32, ap_none, col_in, scalar</column>
+<column name="kernel_address0">out, 10, ap_memory, kernel, array</column>
+<column name="kernel_ce0">out, 1, ap_memory, kernel, array</column>
+<column name="kernel_q0">in, 32, ap_memory, kernel, array</column>
+<column name="kernel_size_row">in, 32, ap_none, kernel_size_row, scalar</column>
+<column name="kernel_size_col">in, 32, ap_none, kernel_size_col, scalar</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">5.20</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'tmp_31', conv2D.c:104">trunc, 0.00, 0.00, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp_28', conv2D.c:104">add, 1.94, 1.94, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp_30_cast', conv2D.c:104">zext, 0.00, 1.94, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'out_data_addr', conv2D.c:104">getelementptr, 0.00, 1.94, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="conv2D.c:104">store, 3.25, 5.20, &apos;sum&apos;, conv2D.c:101, -, -, -, -, -, &apos;out_data&apos;, -, -, -, -</column>
+</table>
+</item>
+</section>
+</profile>
