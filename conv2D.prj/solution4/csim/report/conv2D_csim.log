@@ -1,0 +1,22 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../conv2D_test.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'linhh' on host 'nitro5' (Windows NT_amd64 version 6.2) on Thu Dec 19 02:10:06 +0700 2024
+INFO: [HLS 200-10] In directory 'C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution4/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../conv2D.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'linhh' on host 'nitro5' (Windows NT_amd64 version 6.2) on Thu Dec 19 02:10:10 +0700 2024
+INFO: [HLS 200-10] In directory 'C:/Users/linhh/Desktop/Conv2D/conv2D.prj/solution4/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+Test 1 passed!
+Test 2 passed!
+Test 3 passed!
+Test 4 passed!
+Test 5 passed!
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,242 @@
+==============================================================
+File generated on Thu Dec 19 02:02:19 +0700 2024
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'conv2D.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 102.793 ; gain = 18.262
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 102.793 ; gain = 18.262
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 104.227 ; gain = 19.695
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'initializeBuffer' into 'conv2D' (conv2D.c:94) automatically.
+INFO: [XFORM 203-602] Inlining function 'calculateConvolution' into 'conv2D' (conv2D.c:101) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 104.480 ; gain = 19.949
+INFO: [XFORM 203-501] Unrolling loop 'Output_Col' (conv2D.c:97) in function 'conv2D' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Update_Buffer_Inner_Loop' (conv2D.c:62) in function 'updateBuffer' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Cal_Inner_Loop' (conv2D.c:39) in function 'calculateConvolution' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Initialize_Buffer_Inner_Loop' (conv2D.c:18) in function 'initializeBuffer' partially with a factor of 2.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 125.105 ; gain = 40.574
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 146.699 ; gain = 62.168
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'conv2D' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'initializeBuffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 4.425 seconds; current allocated memory: 107.101 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.088 seconds; current allocated memory: 107.430 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calculateConvolution' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.095 seconds; current allocated memory: 107.751 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.067 seconds; current allocated memory: 107.983 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'updateBuffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'updateBuffer' consists of the following:
+	'add' operation of DSP[77] ('tmp_23', conv2D.c:69) [75]  (0 ns)
+	'mul' operation of DSP[77] ('tmp_16', conv2D.c:69) [76]  (3.36 ns)
+	'add' operation of DSP[77] ('tmp_17', conv2D.c:69) [77]  (3.02 ns)
+	'getelementptr' operation ('in_data_addr', conv2D.c:69) [79]  (0 ns)
+	'load' operation ('in_data_load', conv2D.c:69) on array 'in_data' [80]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.126 seconds; current allocated memory: 108.191 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 108.435 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 108.611 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.119 seconds; current allocated memory: 108.899 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'initializeBuffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'conv2D_mul_mul_8ns_15s_15_1_1' to 'conv2D_mul_mul_8nbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'conv2D_mul_mul_8nbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'initializeBuffer'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 109.394 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'calculateConvolution' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'calculateConvolution'.
+INFO: [HLS 200-111]  Elapsed time: 0.175 seconds; current allocated memory: 109.918 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'updateBuffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'conv2D_ama_addmuladd_15ns_15ns_8ns_15ns_15_1_1' to 'conv2D_ama_addmulcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'conv2D_ama_addmulcud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'updateBuffer'.
+INFO: [HLS 200-111]  Elapsed time: 0.211 seconds; current allocated memory: 110.445 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/in_data' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/out_data' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/row_in' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/col_in' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/kernel' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/kernel_size_row' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/kernel_size_col' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'conv2D' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D'.
+INFO: [HLS 200-111]  Elapsed time: 0.303 seconds; current allocated memory: 111.082 MB.
+INFO: [RTMG 210-278] Implementing memory 'conv2D_buffer_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 163.965 ; gain = 79.434
+INFO: [SYSC 207-301] Generating SystemC RTL for conv2D.
+INFO: [VHDL 208-304] Generating VHDL RTL for conv2D.
+INFO: [VLOG 209-307] Generating Verilog RTL for conv2D.
+INFO: [HLS 200-112] Total elapsed time: 7.426 seconds; peak allocated memory: 111.082 MB.
+==============================================================
+File generated on Thu Dec 19 06:31:07 +0700 2024
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'conv2D.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 102.988 ; gain = 17.703
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 102.988 ; gain = 17.703
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 104.457 ; gain = 19.172
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'initializeBuffer' into 'conv2D' (conv2D.c:94) automatically.
+INFO: [XFORM 203-602] Inlining function 'calculateConvolution' into 'conv2D' (conv2D.c:101) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 104.711 ; gain = 19.426
+INFO: [XFORM 203-501] Unrolling loop 'Output_Col' (conv2D.c:97) in function 'conv2D' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Update_Buffer_Inner_Loop' (conv2D.c:62) in function 'updateBuffer' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Cal_Inner_Loop' (conv2D.c:39) in function 'calculateConvolution' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Initialize_Buffer_Inner_Loop' (conv2D.c:18) in function 'initializeBuffer' partially with a factor of 2.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 124.691 ; gain = 39.406
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 146.559 ; gain = 61.273
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'conv2D' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'initializeBuffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 4.444 seconds; current allocated memory: 107.069 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.093 seconds; current allocated memory: 107.414 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calculateConvolution' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.131 seconds; current allocated memory: 107.735 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.092 seconds; current allocated memory: 107.967 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'updateBuffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'updateBuffer' consists of the following:
+	'add' operation of DSP[77] ('tmp_23', conv2D.c:69) [75]  (0 ns)
+	'mul' operation of DSP[77] ('tmp_16', conv2D.c:69) [76]  (3.36 ns)
+	'add' operation of DSP[77] ('tmp_17', conv2D.c:69) [77]  (3.02 ns)
+	'getelementptr' operation ('in_data_addr', conv2D.c:69) [79]  (0 ns)
+	'load' operation ('in_data_load', conv2D.c:69) on array 'in_data' [80]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 108.190 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.078 seconds; current allocated memory: 108.435 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.119 seconds; current allocated memory: 108.595 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.143 seconds; current allocated memory: 108.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'initializeBuffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'conv2D_mul_mul_8ns_15s_15_1_1' to 'conv2D_mul_mul_8nbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'conv2D_mul_mul_8nbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'initializeBuffer'.
+INFO: [HLS 200-111]  Elapsed time: 0.167 seconds; current allocated memory: 109.378 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'calculateConvolution' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'calculateConvolution'.
+INFO: [HLS 200-111]  Elapsed time: 0.174 seconds; current allocated memory: 109.902 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'updateBuffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'conv2D_ama_addmuladd_15ns_15ns_8ns_15ns_15_1_1' to 'conv2D_ama_addmulcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'conv2D_ama_addmulcud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'updateBuffer'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 110.429 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/in_data' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/out_data' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/row_in' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/col_in' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/kernel' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/kernel_size_row' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv2D/kernel_size_col' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'conv2D' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D'.
+INFO: [HLS 200-111]  Elapsed time: 0.315 seconds; current allocated memory: 111.066 MB.
+INFO: [RTMG 210-278] Implementing memory 'conv2D_buffer_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 164.484 ; gain = 79.199
+INFO: [SYSC 207-301] Generating SystemC RTL for conv2D.
+INFO: [VHDL 208-304] Generating VHDL RTL for conv2D.
+INFO: [VLOG 209-307] Generating Verilog RTL for conv2D.
+INFO: [HLS 200-112] Total elapsed time: 7.541 seconds; peak allocated memory: 111.066 MB.

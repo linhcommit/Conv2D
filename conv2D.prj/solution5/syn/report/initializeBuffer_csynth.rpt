@@ -1,0 +1,302 @@
+
+
+================================================================
+== Vivado HLS Report for 'initializeBuffer'
+================================================================
+* Date:           Thu Dec 19 06:41:44 2024
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        conv2D.prj
+* Solution:       solution5
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.634|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    4|  103|    4|  103|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------------------------------------------+-----+-----+----------+-----------+-----------+---------+----------+
+        |                                                             |  Latency  | Iteration|  Initiation Interval  |   Trip  |          |
+        |                          Loop Name                          | min | max |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +-------------------------------------------------------------+-----+-----+----------+-----------+-----------+---------+----------+
+        |- Initialize_Buffer_Outer_Loop_Initialize_Buffer_Inner_Loop  |    2|  101|         3|          1|          1| 1 ~ 100 |    yes   |
+        +-------------------------------------------------------------+-----+-----+----------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      1|       -|      -|
+|Expression       |        -|      4|       0|   1309|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     93|
+|Register         |        -|      -|    1188|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      5|    1188|   1402|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      2|       1|      2|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    +-------------------------+----------------------+--------------+
+    |         Instance        |        Module        |  Expression  |
+    +-------------------------+----------------------+--------------+
+    |conv2D_mac_muladdbkb_U1  |conv2D_mac_muladdbkb  | i0 * i1 + i2 |
+    +-------------------------+----------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+-------+---+----+------------+------------+
+    |          Variable Name         | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+-------+---+----+------------+------------+
+    |bound_fu_618_p2                 |     *    |      4|  0|  20|          32|          32|
+    |i_buffer_2_dup_fu_775_p2        |     +    |      0|  0|  39|          32|          32|
+    |ik_col_2_fu_835_p2              |     +    |      0|  0|  38|          31|           1|
+    |ik_row_2_fu_769_p2              |     +    |      0|  0|  38|           1|          31|
+    |indvar_flatten_next_fu_763_p2   |     +    |      0|  0|  71|          64|           1|
+    |tmp_18_fu_825_p2                |     +    |      0|  0|  39|           1|          32|
+    |tmp_20_fu_804_p2                |     +    |      0|  0|  38|          31|          31|
+    |exitcond_flatten_fu_758_p2      |   icmp   |      0|  0|  29|          64|          64|
+    |tmp_fu_588_p2                   |   icmp   |      0|  0|  18|          32|           1|
+    |tmp_s_fu_753_p2                 |   icmp   |      0|  0|  18|          32|          32|
+    |buffer_0_write_assi_fu_1245_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_10_write_ass_fu_1315_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_11_write_ass_fu_1322_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_12_write_ass_fu_1329_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_13_write_ass_fu_1336_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_14_write_ass_fu_1343_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_15_write_ass_fu_1350_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_16_write_ass_fu_1357_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_17_write_ass_fu_1364_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_18_write_ass_fu_1371_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_19_write_ass_fu_1378_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_1_write_assi_fu_1252_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_20_write_ass_fu_1385_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_21_write_ass_fu_1392_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_22_write_ass_fu_1399_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_23_write_ass_fu_1406_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_24_write_ass_fu_1413_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_2_write_assi_fu_1259_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_3_write_assi_fu_1266_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_4_write_assi_fu_1273_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_5_write_assi_fu_1280_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_6_write_assi_fu_1287_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_7_write_assi_fu_1294_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_8_write_assi_fu_1301_p3  |  select  |      0|  0|  32|           1|          32|
+    |buffer_9_write_assi_fu_1308_p3  |  select  |      0|  0|  32|           1|          32|
+    |i_buffer_1_mid2_fu_780_p3       |  select  |      0|  0|  32|           1|          32|
+    |i_buffer_mid2_fu_813_p3         |  select  |      0|  0|  32|           1|          32|
+    |ik_col_mid2_fu_788_p3           |  select  |      0|  0|  31|           1|          31|
+    |smax_fu_598_p3                  |  select  |      0|  0|  31|           1|          31|
+    |tmp_15_mid2_v_v_v_fu_796_p3     |  select  |      0|  0|  31|           1|          31|
+    |ap_enable_pp0                   |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1         |    xor   |      0|  0|   2|           2|           1|
+    +--------------------------------+----------+-------+---+----+------------+------------+
+    |Total                           |          |      4|  0|1309|         353|        1217|
+    +--------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------+----+-----------+-----+-----------+
+    |               Name              | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                        |  21|          4|    1|          4|
+    |ap_enable_reg_pp0_iter1          |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2          |   9|          2|    1|          2|
+    |ap_phi_mux_ik_row_phi_fu_559_p4  |   9|          2|   31|         62|
+    |i_buffer_1_reg_566               |   9|          2|   32|         64|
+    |i_buffer_reg_544                 |   9|          2|   32|         64|
+    |ik_col_reg_577                   |   9|          2|   31|         62|
+    |ik_row_reg_555                   |   9|          2|   31|         62|
+    |indvar_flatten_reg_533           |   9|          2|   64|        128|
+    +---------------------------------+----+-----------+-----+-----------+
+    |Total                            |  93|         20|  224|        450|
+    +---------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------+----+----+-----+-----------+
+    |              Name             | FF | LUT| Bits| Const Bits|
+    +-------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                      |   3|   0|    3|          0|
+    |ap_enable_reg_pp0_iter0        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2        |   1|   0|    1|          0|
+    |bound_reg_2042                 |  64|   0|   64|          0|
+    |buffer10_1_fu_320              |  32|   0|   32|          0|
+    |buffer11_1_fu_308              |  32|   0|   32|          0|
+    |buffer12_1_fu_296              |  32|   0|   32|          0|
+    |buffer13_1_fu_284              |  32|   0|   32|          0|
+    |buffer14_1_fu_272              |  32|   0|   32|          0|
+    |buffer1550_1_fu_260            |  32|   0|   32|          0|
+    |buffer1655_1_fu_248            |  32|   0|   32|          0|
+    |buffer16_1_fu_192              |  32|   0|   32|          0|
+    |buffer17_1_fu_236              |  32|   0|   32|          0|
+    |buffer18_1_fu_224              |  32|   0|   32|          0|
+    |buffer19_1_fu_212              |  32|   0|   32|          0|
+    |buffer20_1_fu_200              |  32|   0|   32|          0|
+    |buffer21_1_fu_188              |  32|   0|   32|          0|
+    |buffer22_1_fu_176              |  32|   0|   32|          0|
+    |buffer23_1_fu_164              |  32|   0|   32|          0|
+    |buffer24_1_fu_152              |  32|   0|   32|          0|
+    |buffer2_1_fu_216               |  32|   0|   32|          0|
+    |buffer3_1_fu_240               |  32|   0|   32|          0|
+    |buffer4_1_fu_264               |  32|   0|   32|          0|
+    |buffer5_1_fu_288               |  32|   0|   32|          0|
+    |buffer6_1_fu_312               |  32|   0|   32|          0|
+    |buffer7_1_fu_336               |  32|   0|   32|          0|
+    |buffer8_1_fu_344               |  32|   0|   32|          0|
+    |buffer9_1_fu_332               |  32|   0|   32|          0|
+    |buffer_1_fu_168                |  32|   0|   32|          0|
+    |exitcond_flatten_reg_2047      |   1|   0|    1|          0|
+    |i_buffer_1_reg_566             |  32|   0|   32|          0|
+    |i_buffer_reg_544               |  32|   0|   32|          0|
+    |ik_col_reg_577                 |  31|   0|   31|          0|
+    |ik_row_reg_555                 |  31|   0|   31|          0|
+    |indvar_flatten_reg_533         |  64|   0|   64|          0|
+    |smax_cast_reg_2037             |  31|   0|   32|          1|
+    |tmp_15_mid2_v_v_v_reg_2056     |  31|   0|   31|          0|
+    |tmp_21_reg_2061                |  15|   0|   15|          0|
+    |tmp_22_reg_2071                |  15|   0|   15|          0|
+    |tmp_23_reg_2081                |   5|   0|    5|          0|
+    |tmp_23_reg_2081_pp0_iter1_reg  |   5|   0|    5|          0|
+    |write_flag11_1_fu_228          |   1|   0|    1|          0|
+    |write_flag14_1_fu_252          |   1|   0|    1|          0|
+    |write_flag17_1_fu_276          |   1|   0|    1|          0|
+    |write_flag20_1_fu_300          |   1|   0|    1|          0|
+    |write_flag23_1_fu_324          |   1|   0|    1|          0|
+    |write_flag26_1_fu_348          |   1|   0|    1|          0|
+    |write_flag29_1_fu_340          |   1|   0|    1|          0|
+    |write_flag32_1_fu_328          |   1|   0|    1|          0|
+    |write_flag35_1_fu_316          |   1|   0|    1|          0|
+    |write_flag38_1_fu_304          |   1|   0|    1|          0|
+    |write_flag41_1_fu_292          |   1|   0|    1|          0|
+    |write_flag44_1_fu_280          |   1|   0|    1|          0|
+    |write_flag48_1_fu_268          |   1|   0|    1|          0|
+    |write_flag4_1_fu_180           |   1|   0|    1|          0|
+    |write_flag53_1_fu_256          |   1|   0|    1|          0|
+    |write_flag57_1_fu_244          |   1|   0|    1|          0|
+    |write_flag60_1_fu_232          |   1|   0|    1|          0|
+    |write_flag63_1_fu_220          |   1|   0|    1|          0|
+    |write_flag66_1_fu_208          |   1|   0|    1|          0|
+    |write_flag69_1_fu_196          |   1|   0|    1|          0|
+    |write_flag72_1_fu_184          |   1|   0|    1|          0|
+    |write_flag75_1_fu_172          |   1|   0|    1|          0|
+    |write_flag78_1_fu_160          |   1|   0|    1|          0|
+    |write_flag8_1_fu_204           |   1|   0|    1|          0|
+    |write_flag_1_fu_156            |   1|   0|    1|          0|
+    +-------------------------------+----+----+-----+-----------+
+    |Total                          |1188|   0| 1189|          1|
+    +-------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+------------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++------------------+-----+-----+------------+------------------+--------------+
+|ap_clk            |  in |    1| ap_ctrl_hs | initializeBuffer | return value |
+|ap_rst            |  in |    1| ap_ctrl_hs | initializeBuffer | return value |
+|ap_start          |  in |    1| ap_ctrl_hs | initializeBuffer | return value |
+|ap_done           | out |    1| ap_ctrl_hs | initializeBuffer | return value |
+|ap_idle           | out |    1| ap_ctrl_hs | initializeBuffer | return value |
+|ap_ready          | out |    1| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_0       | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_1       | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_2       | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_3       | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_4       | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_5       | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_6       | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_7       | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_8       | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_9       | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_10      | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_11      | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_12      | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_13      | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_14      | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_15      | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_16      | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_17      | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_18      | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_19      | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_20      | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_21      | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_22      | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_23      | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|ap_return_24      | out |   32| ap_ctrl_hs | initializeBuffer | return value |
+|buffer_0_read     |  in |   32|   ap_none  |   buffer_0_read  |    scalar    |
+|buffer_1_read     |  in |   32|   ap_none  |   buffer_1_read  |    scalar    |
+|buffer_2_read     |  in |   32|   ap_none  |   buffer_2_read  |    scalar    |
+|buffer_3_read     |  in |   32|   ap_none  |   buffer_3_read  |    scalar    |
+|buffer_4_read     |  in |   32|   ap_none  |   buffer_4_read  |    scalar    |
+|buffer_5_read     |  in |   32|   ap_none  |   buffer_5_read  |    scalar    |
+|buffer_6_read     |  in |   32|   ap_none  |   buffer_6_read  |    scalar    |
+|buffer_7_read     |  in |   32|   ap_none  |   buffer_7_read  |    scalar    |
+|buffer_8_read     |  in |   32|   ap_none  |   buffer_8_read  |    scalar    |
+|buffer_9_read     |  in |   32|   ap_none  |   buffer_9_read  |    scalar    |
+|buffer_10_read    |  in |   32|   ap_none  |  buffer_10_read  |    scalar    |
+|buffer_11_read    |  in |   32|   ap_none  |  buffer_11_read  |    scalar    |
+|buffer_12_read    |  in |   32|   ap_none  |  buffer_12_read  |    scalar    |
+|buffer_13_read    |  in |   32|   ap_none  |  buffer_13_read  |    scalar    |
+|buffer_14_read    |  in |   32|   ap_none  |  buffer_14_read  |    scalar    |
+|buffer_15_read    |  in |   32|   ap_none  |  buffer_15_read  |    scalar    |
+|buffer_16_read    |  in |   32|   ap_none  |  buffer_16_read  |    scalar    |
+|buffer_17_read    |  in |   32|   ap_none  |  buffer_17_read  |    scalar    |
+|buffer_18_read    |  in |   32|   ap_none  |  buffer_18_read  |    scalar    |
+|buffer_19_read    |  in |   32|   ap_none  |  buffer_19_read  |    scalar    |
+|buffer_20_read    |  in |   32|   ap_none  |  buffer_20_read  |    scalar    |
+|buffer_21_read    |  in |   32|   ap_none  |  buffer_21_read  |    scalar    |
+|buffer_22_read    |  in |   32|   ap_none  |  buffer_22_read  |    scalar    |
+|buffer_23_read    |  in |   32|   ap_none  |  buffer_23_read  |    scalar    |
+|buffer_24_read    |  in |   32|   ap_none  |  buffer_24_read  |    scalar    |
+|in_data_address0  | out |   14|  ap_memory |      in_data     |     array    |
+|in_data_ce0       | out |    1|  ap_memory |      in_data     |     array    |
+|in_data_q0        |  in |   32|  ap_memory |      in_data     |     array    |
+|index_row_out     |  in |   31|   ap_none  |   index_row_out  |    scalar    |
+|kernel_size_row   |  in |   32|   ap_none  |  kernel_size_row |    scalar    |
+|kernel_size_col   |  in |   32|   ap_none  |  kernel_size_col |    scalar    |
++------------------+-----+-----+------------+------------------+--------------+
+

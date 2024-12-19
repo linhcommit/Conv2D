@@ -1,0 +1,390 @@
+set moduleName updateBuffer
+set isTaskLevelControl 1
+set isCombinational 0
+set isDatapathOnly 0
+set isPipelined 0
+set pipeline_type none
+set FunctionProtocol ap_ctrl_hs
+set isOneStateSeq 0
+set ProfileFlag 0
+set StallSigGenFlag 0
+set isEnableWaveformDebug 1
+set C_modelName {updateBuffer}
+set C_modelType { int 800 }
+set C_modelArgList {
+	{ buffer_0_read int 32 regular  }
+	{ buffer_1_read int 32 regular  }
+	{ buffer_2_read int 32 regular  }
+	{ buffer_3_read int 32 regular  }
+	{ buffer_4_read int 32 regular  }
+	{ buffer_5_read int 32 regular  }
+	{ buffer_6_read int 32 regular  }
+	{ buffer_7_read int 32 regular  }
+	{ buffer_8_read int 32 regular  }
+	{ buffer_9_read int 32 regular  }
+	{ buffer_10_read int 32 regular  }
+	{ buffer_11_read int 32 regular  }
+	{ buffer_12_read int 32 regular  }
+	{ buffer_13_read int 32 regular  }
+	{ buffer_14_read int 32 regular  }
+	{ buffer_15_read int 32 regular  }
+	{ buffer_16_read int 32 regular  }
+	{ buffer_17_read int 32 regular  }
+	{ buffer_18_read int 32 regular  }
+	{ buffer_19_read int 32 regular  }
+	{ buffer_20_read int 32 regular  }
+	{ buffer_21_read int 32 regular  }
+	{ buffer_22_read int 32 regular  }
+	{ buffer_23_read int 32 regular  }
+	{ buffer_24_read int 32 regular  }
+	{ in_data int 32 regular {array 10000 { 1 3 } 1 1 }  }
+	{ index_row_out int 31 regular  }
+	{ index_col_out int 31 regular  }
+	{ kernel_size_row int 32 regular  }
+	{ kernel_size_col int 32 regular  }
+	{ col_in int 32 regular  }
+}
+set C_modelArgMapList {[ 
+	{ "Name" : "buffer_0_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_1_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_2_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_3_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_4_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_5_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_6_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_7_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_8_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_9_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_10_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_11_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_12_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_13_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_14_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_15_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_16_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_17_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_18_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_19_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_20_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_21_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_22_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_23_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "buffer_24_read", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "in_data", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "index_row_out", "interface" : "wire", "bitwidth" : 31, "direction" : "READONLY"} , 
+ 	{ "Name" : "index_col_out", "interface" : "wire", "bitwidth" : 31, "direction" : "READONLY"} , 
+ 	{ "Name" : "kernel_size_row", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "kernel_size_col", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "col_in", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "ap_return", "interface" : "wire", "bitwidth" : 800} ]}
+# RTL Port declarations: 
+set portNum 64
+set portList { 
+	{ ap_clk sc_in sc_logic 1 clock -1 } 
+	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
+	{ ap_start sc_in sc_logic 1 start -1 } 
+	{ ap_done sc_out sc_logic 1 predone -1 } 
+	{ ap_idle sc_out sc_logic 1 done -1 } 
+	{ ap_ready sc_out sc_logic 1 ready -1 } 
+	{ buffer_0_read sc_in sc_lv 32 signal 0 } 
+	{ buffer_1_read sc_in sc_lv 32 signal 1 } 
+	{ buffer_2_read sc_in sc_lv 32 signal 2 } 
+	{ buffer_3_read sc_in sc_lv 32 signal 3 } 
+	{ buffer_4_read sc_in sc_lv 32 signal 4 } 
+	{ buffer_5_read sc_in sc_lv 32 signal 5 } 
+	{ buffer_6_read sc_in sc_lv 32 signal 6 } 
+	{ buffer_7_read sc_in sc_lv 32 signal 7 } 
+	{ buffer_8_read sc_in sc_lv 32 signal 8 } 
+	{ buffer_9_read sc_in sc_lv 32 signal 9 } 
+	{ buffer_10_read sc_in sc_lv 32 signal 10 } 
+	{ buffer_11_read sc_in sc_lv 32 signal 11 } 
+	{ buffer_12_read sc_in sc_lv 32 signal 12 } 
+	{ buffer_13_read sc_in sc_lv 32 signal 13 } 
+	{ buffer_14_read sc_in sc_lv 32 signal 14 } 
+	{ buffer_15_read sc_in sc_lv 32 signal 15 } 
+	{ buffer_16_read sc_in sc_lv 32 signal 16 } 
+	{ buffer_17_read sc_in sc_lv 32 signal 17 } 
+	{ buffer_18_read sc_in sc_lv 32 signal 18 } 
+	{ buffer_19_read sc_in sc_lv 32 signal 19 } 
+	{ buffer_20_read sc_in sc_lv 32 signal 20 } 
+	{ buffer_21_read sc_in sc_lv 32 signal 21 } 
+	{ buffer_22_read sc_in sc_lv 32 signal 22 } 
+	{ buffer_23_read sc_in sc_lv 32 signal 23 } 
+	{ buffer_24_read sc_in sc_lv 32 signal 24 } 
+	{ in_data_address0 sc_out sc_lv 14 signal 25 } 
+	{ in_data_ce0 sc_out sc_logic 1 signal 25 } 
+	{ in_data_q0 sc_in sc_lv 32 signal 25 } 
+	{ index_row_out sc_in sc_lv 31 signal 26 } 
+	{ index_col_out sc_in sc_lv 31 signal 27 } 
+	{ kernel_size_row sc_in sc_lv 32 signal 28 } 
+	{ kernel_size_col sc_in sc_lv 32 signal 29 } 
+	{ col_in sc_in sc_lv 32 signal 30 } 
+	{ ap_return_0 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_1 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_2 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_3 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_4 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_5 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_6 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_7 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_8 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_9 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_10 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_11 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_12 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_13 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_14 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_15 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_16 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_17 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_18 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_19 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_20 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_21 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_22 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_23 sc_out sc_lv 32 signal -1 } 
+	{ ap_return_24 sc_out sc_lv 32 signal -1 } 
+}
+set NewPortList {[ 
+	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
+ 	{ "name": "ap_rst", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst", "role": "default" }} , 
+ 	{ "name": "ap_start", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "start", "bundle":{"name": "ap_start", "role": "default" }} , 
+ 	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
+ 	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
+ 	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
+ 	{ "name": "buffer_0_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_0_read", "role": "default" }} , 
+ 	{ "name": "buffer_1_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_1_read", "role": "default" }} , 
+ 	{ "name": "buffer_2_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_2_read", "role": "default" }} , 
+ 	{ "name": "buffer_3_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_3_read", "role": "default" }} , 
+ 	{ "name": "buffer_4_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_4_read", "role": "default" }} , 
+ 	{ "name": "buffer_5_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_5_read", "role": "default" }} , 
+ 	{ "name": "buffer_6_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_6_read", "role": "default" }} , 
+ 	{ "name": "buffer_7_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_7_read", "role": "default" }} , 
+ 	{ "name": "buffer_8_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_8_read", "role": "default" }} , 
+ 	{ "name": "buffer_9_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_9_read", "role": "default" }} , 
+ 	{ "name": "buffer_10_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_10_read", "role": "default" }} , 
+ 	{ "name": "buffer_11_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_11_read", "role": "default" }} , 
+ 	{ "name": "buffer_12_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_12_read", "role": "default" }} , 
+ 	{ "name": "buffer_13_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_13_read", "role": "default" }} , 
+ 	{ "name": "buffer_14_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_14_read", "role": "default" }} , 
+ 	{ "name": "buffer_15_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_15_read", "role": "default" }} , 
+ 	{ "name": "buffer_16_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_16_read", "role": "default" }} , 
+ 	{ "name": "buffer_17_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_17_read", "role": "default" }} , 
+ 	{ "name": "buffer_18_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_18_read", "role": "default" }} , 
+ 	{ "name": "buffer_19_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_19_read", "role": "default" }} , 
+ 	{ "name": "buffer_20_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_20_read", "role": "default" }} , 
+ 	{ "name": "buffer_21_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_21_read", "role": "default" }} , 
+ 	{ "name": "buffer_22_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_22_read", "role": "default" }} , 
+ 	{ "name": "buffer_23_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_23_read", "role": "default" }} , 
+ 	{ "name": "buffer_24_read", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "buffer_24_read", "role": "default" }} , 
+ 	{ "name": "in_data_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "in_data", "role": "address0" }} , 
+ 	{ "name": "in_data_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "in_data", "role": "ce0" }} , 
+ 	{ "name": "in_data_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "in_data", "role": "q0" }} , 
+ 	{ "name": "index_row_out", "direction": "in", "datatype": "sc_lv", "bitwidth":31, "type": "signal", "bundle":{"name": "index_row_out", "role": "default" }} , 
+ 	{ "name": "index_col_out", "direction": "in", "datatype": "sc_lv", "bitwidth":31, "type": "signal", "bundle":{"name": "index_col_out", "role": "default" }} , 
+ 	{ "name": "kernel_size_row", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "kernel_size_row", "role": "default" }} , 
+ 	{ "name": "kernel_size_col", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "kernel_size_col", "role": "default" }} , 
+ 	{ "name": "col_in", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "col_in", "role": "default" }} , 
+ 	{ "name": "ap_return_0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_0", "role": "default" }} , 
+ 	{ "name": "ap_return_1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_1", "role": "default" }} , 
+ 	{ "name": "ap_return_2", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_2", "role": "default" }} , 
+ 	{ "name": "ap_return_3", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_3", "role": "default" }} , 
+ 	{ "name": "ap_return_4", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_4", "role": "default" }} , 
+ 	{ "name": "ap_return_5", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_5", "role": "default" }} , 
+ 	{ "name": "ap_return_6", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_6", "role": "default" }} , 
+ 	{ "name": "ap_return_7", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_7", "role": "default" }} , 
+ 	{ "name": "ap_return_8", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_8", "role": "default" }} , 
+ 	{ "name": "ap_return_9", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_9", "role": "default" }} , 
+ 	{ "name": "ap_return_10", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_10", "role": "default" }} , 
+ 	{ "name": "ap_return_11", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_11", "role": "default" }} , 
+ 	{ "name": "ap_return_12", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_12", "role": "default" }} , 
+ 	{ "name": "ap_return_13", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_13", "role": "default" }} , 
+ 	{ "name": "ap_return_14", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_14", "role": "default" }} , 
+ 	{ "name": "ap_return_15", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_15", "role": "default" }} , 
+ 	{ "name": "ap_return_16", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_16", "role": "default" }} , 
+ 	{ "name": "ap_return_17", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_17", "role": "default" }} , 
+ 	{ "name": "ap_return_18", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_18", "role": "default" }} , 
+ 	{ "name": "ap_return_19", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_19", "role": "default" }} , 
+ 	{ "name": "ap_return_20", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_20", "role": "default" }} , 
+ 	{ "name": "ap_return_21", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_21", "role": "default" }} , 
+ 	{ "name": "ap_return_22", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_22", "role": "default" }} , 
+ 	{ "name": "ap_return_23", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_23", "role": "default" }} , 
+ 	{ "name": "ap_return_24", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return_24", "role": "default" }}  ]}
+
+set RtlHierarchyInfo {[
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52"],
+		"CDFG" : "updateBuffer",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "6", "EstimateLatencyMax" : "231",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "buffer_0_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_1_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_2_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_3_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_4_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_5_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_6_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_7_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_8_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_9_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_10_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_11_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_12_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_13_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_14_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_15_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_16_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_17_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_18_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_19_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_20_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_21_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_22_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_23_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "buffer_24_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "in_data", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "index_row_out", "Type" : "None", "Direction" : "I"},
+			{"Name" : "index_col_out", "Type" : "None", "Direction" : "I"},
+			{"Name" : "kernel_size_row", "Type" : "None", "Direction" : "I"},
+			{"Name" : "kernel_size_col", "Type" : "None", "Direction" : "I"},
+			{"Name" : "col_in", "Type" : "None", "Direction" : "I"}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_255_32cud_U32", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U33", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U34", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U35", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U36", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U37", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U38", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U39", "Parent" : "0"},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U40", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U41", "Parent" : "0"},
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U42", "Parent" : "0"},
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U43", "Parent" : "0"},
+	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U44", "Parent" : "0"},
+	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U45", "Parent" : "0"},
+	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U46", "Parent" : "0"},
+	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U47", "Parent" : "0"},
+	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U48", "Parent" : "0"},
+	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U49", "Parent" : "0"},
+	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U50", "Parent" : "0"},
+	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U51", "Parent" : "0"},
+	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U52", "Parent" : "0"},
+	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U53", "Parent" : "0"},
+	{"ID" : "23", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U54", "Parent" : "0"},
+	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U55", "Parent" : "0"},
+	{"ID" : "25", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U56", "Parent" : "0"},
+	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U57", "Parent" : "0"},
+	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U58", "Parent" : "0"},
+	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U59", "Parent" : "0"},
+	{"ID" : "29", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U60", "Parent" : "0"},
+	{"ID" : "30", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U61", "Parent" : "0"},
+	{"ID" : "31", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U62", "Parent" : "0"},
+	{"ID" : "32", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U63", "Parent" : "0"},
+	{"ID" : "33", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U64", "Parent" : "0"},
+	{"ID" : "34", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U65", "Parent" : "0"},
+	{"ID" : "35", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U66", "Parent" : "0"},
+	{"ID" : "36", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U67", "Parent" : "0"},
+	{"ID" : "37", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U68", "Parent" : "0"},
+	{"ID" : "38", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U69", "Parent" : "0"},
+	{"ID" : "39", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U70", "Parent" : "0"},
+	{"ID" : "40", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U71", "Parent" : "0"},
+	{"ID" : "41", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U72", "Parent" : "0"},
+	{"ID" : "42", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U73", "Parent" : "0"},
+	{"ID" : "43", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U74", "Parent" : "0"},
+	{"ID" : "44", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U75", "Parent" : "0"},
+	{"ID" : "45", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U76", "Parent" : "0"},
+	{"ID" : "46", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U77", "Parent" : "0"},
+	{"ID" : "47", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U78", "Parent" : "0"},
+	{"ID" : "48", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U79", "Parent" : "0"},
+	{"ID" : "49", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U80", "Parent" : "0"},
+	{"ID" : "50", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U81", "Parent" : "0"},
+	{"ID" : "51", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_mux_325_32dEe_U82", "Parent" : "0"},
+	{"ID" : "52", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv2D_ama_addmuleOg_U83", "Parent" : "0"}]}
+
+
+set ArgLastReadFirstWriteLatency {
+	updateBuffer {
+		buffer_0_read {Type I LastRead 0 FirstWrite -1}
+		buffer_1_read {Type I LastRead 0 FirstWrite -1}
+		buffer_2_read {Type I LastRead 0 FirstWrite -1}
+		buffer_3_read {Type I LastRead 0 FirstWrite -1}
+		buffer_4_read {Type I LastRead 0 FirstWrite -1}
+		buffer_5_read {Type I LastRead 0 FirstWrite -1}
+		buffer_6_read {Type I LastRead 0 FirstWrite -1}
+		buffer_7_read {Type I LastRead 0 FirstWrite -1}
+		buffer_8_read {Type I LastRead 0 FirstWrite -1}
+		buffer_9_read {Type I LastRead 0 FirstWrite -1}
+		buffer_10_read {Type I LastRead 0 FirstWrite -1}
+		buffer_11_read {Type I LastRead 0 FirstWrite -1}
+		buffer_12_read {Type I LastRead 0 FirstWrite -1}
+		buffer_13_read {Type I LastRead 0 FirstWrite -1}
+		buffer_14_read {Type I LastRead 0 FirstWrite -1}
+		buffer_15_read {Type I LastRead 0 FirstWrite -1}
+		buffer_16_read {Type I LastRead 0 FirstWrite -1}
+		buffer_17_read {Type I LastRead 0 FirstWrite -1}
+		buffer_18_read {Type I LastRead 0 FirstWrite -1}
+		buffer_19_read {Type I LastRead 0 FirstWrite -1}
+		buffer_20_read {Type I LastRead 0 FirstWrite -1}
+		buffer_21_read {Type I LastRead 0 FirstWrite -1}
+		buffer_22_read {Type I LastRead 0 FirstWrite -1}
+		buffer_23_read {Type I LastRead 0 FirstWrite -1}
+		buffer_24_read {Type I LastRead 0 FirstWrite -1}
+		in_data {Type I LastRead 2 FirstWrite -1}
+		index_row_out {Type I LastRead 0 FirstWrite -1}
+		index_col_out {Type I LastRead 0 FirstWrite -1}
+		kernel_size_row {Type I LastRead 0 FirstWrite -1}
+		kernel_size_col {Type I LastRead 0 FirstWrite -1}
+		col_in {Type I LastRead 0 FirstWrite -1}}}
+
+set hasDtUnsupportedChannel 0
+
+set PerformanceInfo {[
+	{"Name" : "Latency", "Min" : "6", "Max" : "231"}
+	, {"Name" : "Interval", "Min" : "6", "Max" : "231"}
+]}
+
+set PipelineEnableSignalInfo {[
+]}
+
+set Spec2ImplPortList { 
+	buffer_0_read { ap_none {  { buffer_0_read in_data 0 32 } } }
+	buffer_1_read { ap_none {  { buffer_1_read in_data 0 32 } } }
+	buffer_2_read { ap_none {  { buffer_2_read in_data 0 32 } } }
+	buffer_3_read { ap_none {  { buffer_3_read in_data 0 32 } } }
+	buffer_4_read { ap_none {  { buffer_4_read in_data 0 32 } } }
+	buffer_5_read { ap_none {  { buffer_5_read in_data 0 32 } } }
+	buffer_6_read { ap_none {  { buffer_6_read in_data 0 32 } } }
+	buffer_7_read { ap_none {  { buffer_7_read in_data 0 32 } } }
+	buffer_8_read { ap_none {  { buffer_8_read in_data 0 32 } } }
+	buffer_9_read { ap_none {  { buffer_9_read in_data 0 32 } } }
+	buffer_10_read { ap_none {  { buffer_10_read in_data 0 32 } } }
+	buffer_11_read { ap_none {  { buffer_11_read in_data 0 32 } } }
+	buffer_12_read { ap_none {  { buffer_12_read in_data 0 32 } } }
+	buffer_13_read { ap_none {  { buffer_13_read in_data 0 32 } } }
+	buffer_14_read { ap_none {  { buffer_14_read in_data 0 32 } } }
+	buffer_15_read { ap_none {  { buffer_15_read in_data 0 32 } } }
+	buffer_16_read { ap_none {  { buffer_16_read in_data 0 32 } } }
+	buffer_17_read { ap_none {  { buffer_17_read in_data 0 32 } } }
+	buffer_18_read { ap_none {  { buffer_18_read in_data 0 32 } } }
+	buffer_19_read { ap_none {  { buffer_19_read in_data 0 32 } } }
+	buffer_20_read { ap_none {  { buffer_20_read in_data 0 32 } } }
+	buffer_21_read { ap_none {  { buffer_21_read in_data 0 32 } } }
+	buffer_22_read { ap_none {  { buffer_22_read in_data 0 32 } } }
+	buffer_23_read { ap_none {  { buffer_23_read in_data 0 32 } } }
+	buffer_24_read { ap_none {  { buffer_24_read in_data 0 32 } } }
+	in_data { ap_memory {  { in_data_address0 mem_address 1 14 }  { in_data_ce0 mem_ce 1 1 }  { in_data_q0 mem_dout 0 32 } } }
+	index_row_out { ap_none {  { index_row_out in_data 0 31 } } }
+	index_col_out { ap_none {  { index_col_out in_data 0 31 } } }
+	kernel_size_row { ap_none {  { kernel_size_row in_data 0 32 } } }
+	kernel_size_col { ap_none {  { kernel_size_col in_data 0 32 } } }
+	col_in { ap_none {  { col_in in_data 0 32 } } }
+}

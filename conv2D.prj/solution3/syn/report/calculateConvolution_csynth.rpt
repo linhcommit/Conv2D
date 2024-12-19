@@ -1,0 +1,164 @@
+
+
+================================================================
+== Vivado HLS Report for 'calculateConvolution'
+================================================================
+* Date:           Thu Dec 19 06:35:47 2024
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        conv2D.prj
+* Solution:       solution3
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.510|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    7|  421|    7|  421|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+-----+-----+----------+-----------+-----------+--------+----------+
+        |                   |  Latency  | Iteration|  Initiation Interval  |  Trip  |          |
+        |     Loop Name     | min | max |  Latency |  achieved |   target  |  Count | Pipelined|
+        +-------------------+-----+-----+----------+-----------+-----------+--------+----------+
+        |- Cal_Outer_Loop   |    6|  420|  6 ~ 42  |          -|          -| 1 ~ 10 |    no    |
+        | + Cal_Inner_Loop  |    4|   40|         4|          -|          -| 1 ~ 10 |    no    |
+        +-------------------+-----+-----+----------+-----------+-----------+--------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      3|       0|    307|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     83|
+|Register         |        -|      -|     409|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      3|     409|    390|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      1|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |tmp_32_fu_211_p2     |     *    |      3|  0|  20|          32|          32|
+    |ik_col_3_fu_180_p2   |     +    |      0|  0|  38|          31|           1|
+    |ik_row_3_fu_165_p2   |     +    |      0|  0|  38|           1|          31|
+    |next_mul2_fu_145_p2  |     +    |      0|  0|  45|           7|          38|
+    |next_mul_fu_151_p2   |     +    |      0|  0|  39|          32|          32|
+    |sum_1_fu_215_p2      |     +    |      0|  0|  39|          32|          32|
+    |tmp_29_fu_186_p2     |     +    |      0|  0|  39|          32|          32|
+    |tmp_33_fu_201_p2     |     +    |      0|  0|  13|          11|          11|
+    |tmp_28_fu_175_p2     |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_fu_160_p2        |   icmp   |      0|  0|  18|          32|          32|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |Total                |          |      3|  0| 307|         242|         273|
+    +---------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------+----+-----------+-----+-----------+
+    |       Name       | LUT| Input Size| Bits| Total Bits|
+    +------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm         |  38|          7|    1|          7|
+    |ik_col_reg_122    |   9|          2|   31|         62|
+    |ik_row_reg_88     |   9|          2|   31|         62|
+    |phi_mul1_reg_111  |   9|          2|   38|         76|
+    |phi_mul_reg_99    |   9|          2|   32|         64|
+    |sum_fu_46         |   9|          2|   32|         64|
+    +------------------+----+-----------+-----+-----------+
+    |Total             |  83|         17|  165|        335|
+    +------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------+----+----+-----+-----------+
+    |         Name        | FF | LUT| Bits| Const Bits|
+    +---------------------+----+----+-----+-----------+
+    |ap_CS_fsm            |   6|   0|    6|          0|
+    |buffer_load_reg_284  |  32|   0|   32|          0|
+    |ik_col_3_reg_269     |  31|   0|   31|          0|
+    |ik_col_reg_122       |  31|   0|   31|          0|
+    |ik_row_3_reg_261     |  31|   0|   31|          0|
+    |ik_row_reg_88        |  31|   0|   31|          0|
+    |kernel_load_reg_289  |  32|   0|   32|          0|
+    |next_mul2_reg_248    |  38|   0|   38|          0|
+    |next_mul_reg_253     |  32|   0|   32|          0|
+    |phi_mul1_reg_111     |  38|   0|   38|          0|
+    |phi_mul_reg_99       |  32|   0|   32|          0|
+    |sum_fu_46            |  32|   0|   32|          0|
+    |tmp_32_reg_294       |  32|   0|   32|          0|
+    |tmp_35_reg_243       |  11|   0|   11|          0|
+    +---------------------+----+----+-----+-----------+
+    |Total                | 409|   0|  409|          0|
+    +---------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+----------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk             |  in |    1| ap_ctrl_hs | calculateConvolution | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs | calculateConvolution | return value |
+|ap_start           |  in |    1| ap_ctrl_hs | calculateConvolution | return value |
+|ap_done            | out |    1| ap_ctrl_hs | calculateConvolution | return value |
+|ap_idle            | out |    1| ap_ctrl_hs | calculateConvolution | return value |
+|ap_ready           | out |    1| ap_ctrl_hs | calculateConvolution | return value |
+|ap_return          | out |   32| ap_ctrl_hs | calculateConvolution | return value |
+|buffer_r_address0  | out |    5|  ap_memory |       buffer_r       |     array    |
+|buffer_r_ce0       | out |    1|  ap_memory |       buffer_r       |     array    |
+|buffer_r_q0        |  in |   32|  ap_memory |       buffer_r       |     array    |
+|kernel_address0    | out |   10|  ap_memory |        kernel        |     array    |
+|kernel_ce0         | out |    1|  ap_memory |        kernel        |     array    |
+|kernel_q0          |  in |   32|  ap_memory |        kernel        |     array    |
+|kernel_size_row    |  in |   32|   ap_none  |    kernel_size_row   |    scalar    |
+|kernel_size_col    |  in |   32|   ap_none  |    kernel_size_col   |    scalar    |
++-------------------+-----+-----+------------+----------------------+--------------+
+

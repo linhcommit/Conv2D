@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'conv2D' consists of the following:&#xD;&#xA;&#x9;'add' operation of DSP[126] ('tmp_26', conv2D.c:20->conv2D.c:94) [119]  (0 ns)&#xD;&#xA;&#x9;'mul' operation of DSP[126] ('tmp_s', conv2D.c:20->conv2D.c:94) [120]  (3.36 ns)&#xD;&#xA;&#x9;'add' operation of DSP[126] ('tmp_15', conv2D.c:20->conv2D.c:94) [126]  (3.02 ns)&#xD;&#xA;&#x9;'getelementptr' operation ('in_data_addr', conv2D.c:20->conv2D.c:94) [128]  (0 ns)&#xD;&#xA;&#x9;'load' operation ('buffer[0]', conv2D.c:20->conv2D.c:94) on array 'in_data' [129]  (3.25 ns)" projectName="conv2D.prj" solutionName="solution6" date="2024-12-19T06:44:39.789+0700" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="conv2D.prj" solutionName="solution6" date="2024-12-19T06:44:39.779+0700" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened." projectName="conv2D.prj" solutionName="solution6" date="2024-12-19T06:44:38.839+0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Output_Row' (conv2D.c:90:96) in function 'conv2D' : &#xD;&#xA;&#xD;&#xA;more than one sub loop." projectName="conv2D.prj" solutionName="solution6" date="2024-12-19T06:44:38.334+0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Output_Col' (conv2D.c:97:100) in function 'conv2D' : &#xD;&#xA;&#xD;&#xA;more than one sub loop." projectName="conv2D.prj" solutionName="solution6" date="2024-12-19T06:44:38.096+0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Update_Buffer_Outer_Loop' (conv2D.c:59:62) in function 'conv2D' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop." projectName="conv2D.prj" solutionName="solution6" date="2024-12-19T06:44:38.080+0700" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,177 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'conv2D'" level="0">
+<item name = "Date">Thu Dec 19 06:31:13 2024
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">conv2D.prj</item>
+<item name = "Solution">solution2</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 9.634, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">56, 68581, 56, 68581, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_calculateConvolution_fu_164">calculateConvolution, 11, 411, 11, 411, none</column>
+<column name="grp_updateBuffer_fu_174">updateBuffer, 8, 251, 8, 251, none</column>
+<column name="grp_initializeBuffer_fu_188">initializeBuffer, 6, 191, 6, 191, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Output_Row">55, 68580, 55 ~ 6858, -, -, 1 ~ 10, no</column>
+<column name=" + Output_Col">46, 6663, 46 ~ 1332, -, -, 1 ~ 5, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 551</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, 5, 1348, 2221</column>
+<column name="Memory">0, -, 64, 13</column>
+<column name="Multiplexer">-, -, -, 221</column>
+<column name="Register">-, -, 358, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">0, 2, 1, 5</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_calculateConvolution_fu_164">calculateConvolution, 0, 3, 574, 772</column>
+<column name="grp_initializeBuffer_fu_188">initializeBuffer, 0, 1, 369, 662</column>
+<column name="grp_updateBuffer_fu_174">updateBuffer, 0, 1, 405, 787</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="buffer_U">conv2D_buffer, 0, 64, 13, 25, 32, 1, 800</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="index_col_out_1_1_fu_353_p2">+, 0, 0, 39, 2, 32</column>
+<column name="index_row_out_1_fu_242_p2">+, 0, 0, 38, 1, 31</column>
+<column name="next_mul_fu_227_p2">+, 0, 0, 45, 7, 38</column>
+<column name="tmp_17_fu_211_p2">+, 0, 0, 32, 32, 1</column>
+<column name="tmp_18_op_op_fu_255_p2">+, 0, 0, 39, 32, 1</column>
+<column name="tmp_24_fu_332_p2">+, 0, 0, 21, 15, 15</column>
+<column name="tmp_26_fu_362_p2">+, 0, 0, 21, 15, 15</column>
+<column name="tmp_fu_199_p2">+, 0, 0, 32, 32, 1</column>
+<column name="p_neg_t_fu_283_p2">-, 0, 0, 38, 1, 31</column>
+<column name="tmp_18_fu_217_p2">-, 0, 0, 32, 32, 32</column>
+<column name="tmp_s_fu_205_p2">-, 0, 0, 32, 32, 32</column>
+<column name="ap_block_state7_on_subcall_done">and, 0, 0, 2, 1, 1</column>
+<column name="tmp_19_fu_237_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="tmp_25_1_fu_348_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="tmp_44_fu_323_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="index_col_out_1_s_fu_342_p2">or, 0, 0, 32, 32, 1</column>
+<column name="tmp_41_fu_299_p3">select, 0, 0, 31, 1, 31</column>
+<column name="tmp_42_fu_307_p3">select, 0, 0, 31, 1, 1</column>
+<column name="p_neg_fu_268_p2">xor, 0, 0, 32, 32, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">53, 12, 1, 12</column>
+<column name="buffer_address0">21, 4, 5, 20</column>
+<column name="buffer_ce0">21, 4, 1, 4</column>
+<column name="buffer_d0">15, 3, 32, 96</column>
+<column name="buffer_we0">15, 3, 1, 3</column>
+<column name="grp_updateBuffer_fu_174_index_col_out">15, 3, 32, 96</column>
+<column name="in_data_address0">15, 3, 14, 42</column>
+<column name="in_data_ce0">15, 3, 1, 3</column>
+<column name="index_col_out_reg_152">9, 2, 32, 64</column>
+<column name="index_row_out_reg_129">9, 2, 31, 62</column>
+<column name="kernel_ce0">9, 2, 1, 2</column>
+<column name="out_data_address0">15, 3, 14, 42</column>
+<column name="phi_mul_reg_141">9, 2, 38, 76</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">11, 0, 11, 0</column>
+<column name="grp_calculateConvolution_fu_164_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_initializeBuffer_fu_188_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_updateBuffer_fu_174_ap_start_reg">1, 0, 1, 0</column>
+<column name="index_col_out_1_1_reg_441">32, 0, 32, 0</column>
+<column name="index_col_out_1_s_reg_432">31, 0, 32, 1</column>
+<column name="index_col_out_reg_152">32, 0, 32, 0</column>
+<column name="index_row_out_1_reg_418">31, 0, 31, 0</column>
+<column name="index_row_out_reg_129">31, 0, 31, 0</column>
+<column name="next_mul_reg_410">38, 0, 38, 0</column>
+<column name="phi_mul_reg_141">38, 0, 38, 0</column>
+<column name="tmp_18_reg_396">32, 0, 32, 0</column>
+<column name="tmp_37_reg_404">15, 0, 15, 0</column>
+<column name="tmp_43_reg_423">31, 0, 32, 1</column>
+<column name="tmp_44_reg_428">1, 0, 1, 0</column>
+<column name="tmp_s_reg_391">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, conv2D, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, conv2D, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, conv2D, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, conv2D, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, conv2D, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, conv2D, return value</column>
+<column name="in_data_address0">out, 14, ap_memory, in_data, array</column>
+<column name="in_data_ce0">out, 1, ap_memory, in_data, array</column>
+<column name="in_data_q0">in, 32, ap_memory, in_data, array</column>
+<column name="out_data_address0">out, 14, ap_memory, out_data, array</column>
+<column name="out_data_ce0">out, 1, ap_memory, out_data, array</column>
+<column name="out_data_we0">out, 1, ap_memory, out_data, array</column>
+<column name="out_data_d0">out, 32, ap_memory, out_data, array</column>
+<column name="row_in">in, 32, ap_none, row_in, scalar</column>
+<column name="col_in">in, 32, ap_none, col_in, scalar</column>
+<column name="kernel_address0">out, 10, ap_memory, kernel, array</column>
+<column name="kernel_ce0">out, 1, ap_memory, kernel, array</column>
+<column name="kernel_q0">in, 32, ap_memory, kernel, array</column>
+<column name="kernel_size_row">in, 32, ap_none, kernel_size_row, scalar</column>
+<column name="kernel_size_col">in, 32, ap_none, kernel_size_col, scalar</column>
+</table>
+</item>
+</section>
+</profile>

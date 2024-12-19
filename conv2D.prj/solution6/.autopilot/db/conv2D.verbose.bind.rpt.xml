@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'conv2D'" level="0">
+<item name = "Date">Thu Dec 19 06:44:40 2024
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">conv2D.prj</item>
+<item name = "Solution">solution6</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 9.634, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">21, 25761, 21, 25761, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Output_Row">20, 25760, 20 ~ 2576, -, -, 1 ~ 10, no</column>
+<column name=" + Initialize_Buffer_Outer_Loop_Initialize_Buffer_Inner_Loop">3, 102, 3, 1, 1, 1 ~ 100, yes</column>
+<column name=" + Output_Col">13, 2470, 13 ~ 247, -, -, 1 ~ 10, no</column>
+<column name="  ++ Cal_Outer_Loop_Cal_Inner_Loop">4, 103, 5, 1, 1, 1 ~ 100, yes</column>
+<column name="  ++ Update_Buffer_Outer_Loop">5, 140, 5 ~ 14, -, -, 1 ~ 10, no</column>
+<column name="   +++ Update_Buffer_Inner_Loop">1, 10, 1, 1, 1, 1 ~ 10, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
